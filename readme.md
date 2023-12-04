@@ -10,11 +10,11 @@ do
 	python train_data_collection.py --env-type cheetah_vel --save-models 1 --log-tensorboard 1 --seed $seed
 done
 ```
-Data collection program uses SAC algorithm to collect offline data, hyperparameters can be modified at data\_collection\_config
+Data collection program uses SAC algorithm to collect offline data, hyperparameters can be accessed and modified at data\_collection\_config
 
 ## Run FOCAL
 ```
-python train\_offline\_FOCAL.py --env-type cheeta_vel
+python train_offline_FOCAL.py --env-type cheeta_vel
 ```
 Change the argument `--env-type` to choose a different environment:
 
