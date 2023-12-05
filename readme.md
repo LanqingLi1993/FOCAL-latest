@@ -12,6 +12,13 @@ done
 ```
 Data collection program uses SAC algorithm to collect offline data, hyperparameters can be accessed and modified at data\_collection\_config
 
+## Mujoco Environment Installation
+Ant and Cheetah environments need mujoco210. Refer to https://github.com/openai/mujoco-py for more details about mujoco210 installation.
+
+Walker and Hopper environments need mujoco131. Download mjpro131 and mjkey from https://www.roboti.us/download.html, extract them into ```~/.mujoco/mjpro131```, and set ```export MUJOCO_PY_MJPRO_PATH=~/.mujoco/mjpro131```, then mujoco131 is ready to go.
+
+Be aware that the environment variable of mujoco131 ```MUJOCO_PY_MJPRO_PATH``` is different from mujoco210 ```MUJOCO_PY_MUJOCO_PATH```. Please discern them to avoid potential errors.
+
 ## Run FOCAL
 ```
 python train_offline_FOCAL.py --env-type cheeta_vel
